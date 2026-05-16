@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ジョブ詳細画面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .section {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .label {
+            font-weight: bold;
+            display: inline-block;
+            width: 160px;
+        }
+
+        .failed {
+            color: red;
+            font-weight: bold;
+        }
+
+        .success {
+            color: green;
+            font-weight: bold;
+        }
+
+        a {
+            text-decoration: none;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>ジョブ詳細画面</h1>
+
+    <div class="section">
+        <p><span class="label">ジョブID:</span><span id="jobId"></span></p>
+        <p><span class="label">ジョブ名:</span><span id="jobName"></span></p>
+        <p><span class="label">ステータス:</span><span id="status"></span></p>
+        <p><span class="label">実行日時:</span><span id="executedAt"></span></p>
+        <p><span class="label">エラーコード:</span><span id="errorCode"></span></p>
+        <p><span class="label">エラーメッセージ:</span><span id="errorMessage"></span></p>
+    </div>
+
+    <div class="section" id="runbookSection">
+        <h2>対処方法</h2>
+        <p><span class="label">タイトル:</span><span id="runbookTitle"></span></p>
+        <p><span class="label">原因:</span><span id="runbookCause"></span></p>
+        <p><span class="label">対応方法:</span><span id="runbookAction"></span></p>
+    </div>
+
+    <p>
+        <a href="index.html">一覧画面へ戻る</a>
+    </p>
+
+    <script src="detail.js"></script>
+</body>
+</html>

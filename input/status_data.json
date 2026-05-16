@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "system_name": "batch_server_a",
+    "check_target": "job_daily_sales",
+    "status": "success",
+    "checked_at": "2026-04-29T10:00:00"
+  },
+  {
+    "id": 2,
+    "system_name": "batch_server_b",
+    "check_target": "job_user_import",
+    "status": "success",
+    "checked_at": "2026-04-29T10:05:00"
+  },
+  {
+    "id": 3,
+    "system_name": "batch_server_c",
+    "status": "success"
+  },
+  {
+    "id": 4,
+    "system_name": "batch_server_d",
+    "check_target": "job_inventory_sync",
+    "status": "failed",
+    "checked_at": "2026-04-29T10:10:00"
+  }
+]

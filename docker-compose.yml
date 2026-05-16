@@ -1,0 +1,25 @@
+services:
+  api:
+    build: ./script/api
+    ports:
+      - "8080:8080"
+    environment:
+      DB_PATH: /data/20260429_portfolioDB.db
+    volumes:
+      - ./DB:/data
+
+  batch:
+    build: ./script/confirm
+    environment:
+      DB_PATH: /data/20260429_portfolioDB.db
+      INPUT_FILE: /input/status_data.json
+    volumes:
+      - ./DB:/data
+      - ./input:/input
+
+  web:
+    image: nginx:alpine
+    ports:
+      - "8081:80"
+    volumes:
+      - ./script/web:/usr/share/nginx/html
